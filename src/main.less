@@ -1,0 +1,83 @@
+@import "./utils/media.less";
+@import "./utils/text.less";
+
+.icons{
+  transform: scale(0.1);
+  // height: 42px;
+
+}
+
+.title {
+  .text-h2();
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+  margin-top: 48px;
+}
+
+
+.type_list{
+  list-style-type: "\2014\A0";
+  margin-left: 48px;
+  // font-weight: 700;
+}
+.number_block{
+  display: flex;
+  position: relative;
+  bottom: 60px; 
+  margin: auto;
+  border-radius: var(--radius-s);
+}
+
+.block {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  padding: 32px;
+  border-radius: var(--radius-s);
+  background-color: var(--base-01);
+  
+
+
+  &__middle{
+    .text-basic();
+      display: flex;
+      justify-content: center;
+    }
+  &__middle_button{
+    .text-basic();
+      display: flex;
+      justify-content: center;
+      margin-top: 56px;
+      margin-bottom: 80px;
+    }
+
+
+  &__title {
+    .text-h4();
+    align-self: flex-start;
+  }
+
+  &__info {
+    .text-basic();
+    margin: 0;
+  }
+  &__info1 {
+    .text-basic();
+    position: relative;
+    bottom: 30px; 
+    margin: 0;
+  }
+  
+}
+
+
+*:has(.block) {
+  @media @mobile {
+    margin-bottom: 24px;
+  }
+
+  @media @tablet {
+    margin-bottom: 24px;
+  }
+}

@@ -17,8 +17,13 @@
 }
 .number_block {
   display: flex;
-  position: relative;
-  bottom: 60px;
+  position: absolute;
+  height: 0;
+  justify-content: center;
+  top: -25px;
+  left: 0px;
+  margin: 0 auto;
+  width: 100%;
   margin: auto;
   border-radius: var(--radius-s);
 }
@@ -27,6 +32,14 @@
   flex-flow: column nowrap;
   height: 100%;
   padding: 32px;
+  border-radius: var(--radius-s);
+  background-color: var(--base-01);
+  justify-content: flex-start;
+}
+.block__black {
+  height: 100%;
+  position: relative;
+  padding: 30px;
   border-radius: var(--radius-s);
   background-color: var(--base-01);
 }
@@ -59,7 +72,6 @@
 .block__info1 {
   font: var(--font-text-s);
   color: var(--text-01);
-  position: relative;
   bottom: 30px;
   margin: 0;
 }

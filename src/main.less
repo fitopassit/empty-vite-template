@@ -23,11 +23,21 @@
 }
 .number_block{
   display: flex;
-  position: relative;
-  bottom: 60px; 
+  position: absolute;
+  height: 0;
+  justify-content: center;
+  top: -25px;
+  left: 0px;
+  margin: 0 auto;
+  width: 100%;
   margin: auto;
   border-radius: var(--radius-s);
 }
+.wasd{
+  .col_sm-6();
+    margin-top: 30px;
+}
+
 
 .block {
   display: flex;
@@ -36,8 +46,14 @@
   padding: 32px;
   border-radius: var(--radius-s);
   background-color: var(--base-01);
-  
-
+  justify-content: flex-start;
+  &__black{
+    height: 100%;
+    position: relative;
+    padding: 30px;
+    border-radius: var(--radius-s);
+    background-color: var(--base-01)
+  }
 
   &__middle{
     .text-basic();
@@ -64,7 +80,6 @@
   }
   &__info1 {
     .text-basic();
-    position: relative;
     bottom: 30px; 
     margin: 0;
   }

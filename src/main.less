@@ -1,5 +1,9 @@
 @import "./utils/media.less";
 @import "./utils/text.less";
+@import './utils/media.less';
+@import './utils/animation.less';
+
+
 
 .icons{
   transform: scale(0.1);
@@ -58,11 +62,30 @@
     }
   &__middle_button{
     .text-basic();
+    
       display: flex;
       justify-content: center;
       margin-top: 56px;
       margin-bottom: 80px;
-    }
+      :hover {
+        border-radius: var(--radius-s);
+        .transition(background-color);
+        background-color: var(--primary-hover);
+      }
+      
+      :focus{
+        outline-color: var(--primary-focus);
+        border-radius: var(--radius-s);
+      }
+
+      :active {
+        .transition(background-color);
+        border-radius: var(--radius-s);
+        background-color: var(--primary-active);
+        }
+        
+      }
+    
 
 
   &__title {
@@ -82,6 +105,9 @@
   
 }
 
+.icon{
+  margin-bottom: 44px;
+}
 
 *:has(.block) {
   @media @mobile {

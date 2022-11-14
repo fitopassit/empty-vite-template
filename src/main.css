@@ -57,6 +57,20 @@
   margin-top: 56px;
   margin-bottom: 80px;
 }
+.block__middle_button :hover {
+  border-radius: var(--radius-s);
+  transition: background-color 0.3s 0s ease-in-out;
+  background-color: var(--primary-hover);
+}
+.block__middle_button :focus {
+  outline-color: var(--primary-focus);
+  border-radius: var(--radius-s);
+}
+.block__middle_button :active {
+  transition: background-color 0.3s 0s ease-in-out;
+  border-radius: var(--radius-s);
+  background-color: var(--primary-active);
+}
 .block__title {
   font: var(--font-h4);
   color: var(--text-01);
@@ -74,6 +88,9 @@
   color: var(--text-01);
   bottom: 30px;
   margin: 0;
+}
+.icon {
+  margin-bottom: 44px;
 }
 @media screen and (max-width: 599px) {
   *:has(.block) {

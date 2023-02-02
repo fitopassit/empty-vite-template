@@ -1,0 +1,120 @@
+@import "./utils/media.less";
+@import "./utils/text.less";
+@import './utils/media.less';
+@import './utils/animation.less';
+
+
+
+.icons{
+  transform: scale(0.1);
+  // height: 42px;
+
+}
+
+.title {
+  .text-h2();
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+  margin-top: 48px;
+}
+
+
+.type_list{
+  list-style-type: "\2014\A0";
+  margin-left: 48px;
+  // font-weight: 700;
+}
+.number_block{
+  display: flex;
+  position: absolute;
+  height: 0;
+  justify-content: center;
+  top: -25px;
+  left: 0px;
+  margin: 0 auto;
+  width: 100%;
+  margin: auto;
+  border-radius: var(--radius-s);
+}
+
+
+.block {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  padding: 32px;
+  border-radius: var(--radius-s);
+  background-color: var(--base-01);
+  justify-content: flex-start;
+  &__black{
+    height: 100%;
+    position: relative;
+    padding: 30px;
+    border-radius: var(--radius-s);
+    background-color: var(--base-01)
+  }
+
+  &__middle{
+    .text-basic();
+      display: flex;
+      justify-content: center;
+    }
+  &__middle_button{
+    .text-basic();
+    
+      display: flex;
+      justify-content: center;
+      margin-top: 56px;
+      margin-bottom: 80px;
+      :hover {
+        border-radius: var(--radius-s);
+        .transition(background-color);
+        background-color: var(--primary-hover);
+      }
+      
+      :focus{
+        outline-color: var(--primary-focus);
+        border-radius: var(--radius-s);
+      }
+
+      :active {
+        .transition(background-color);
+        border-radius: var(--radius-s);
+        background-color: var(--primary-active);
+        }
+        
+      }
+    
+
+
+  &__title {
+    .text-h4();
+    align-self: flex-start;
+  }
+
+  &__info {
+    .text-basic();
+    margin: 0;
+  }
+  &__info1 {
+    .text-basic();
+    bottom: 30px; 
+    margin: 0;
+  }
+  
+}
+
+.icon{
+  margin-bottom: 44px;
+}
+
+*:has(.block) {
+  @media @mobile {
+    margin-bottom: 24px;
+  }
+
+  @media @tablet {
+    margin-bottom: 24px;
+  }
+}
